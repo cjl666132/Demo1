@@ -1,59 +1,56 @@
-
-def add(string):  # 加法
-    tmp = 0
+﻿def add(string):  # 加法
+    x = 0
     numbers = []
     numbers += string.split("+")
     for i in numbers:
-        tmp += int(i.strip())
+        x += int(i.strip())
 
-    print("{0} = {1}".format(string, tmp))
-
+    print("{0} = {1}".format(string, x))
 
 def jian(string):#减法
     numbers = []
     numbers += string.split("-")
-    tmp = int(numbers[0].strip())
+    x = int(numbers[0].strip())
     numbers.pop(0)
     for i in numbers:
-        tmp -= int(i.strip())
-    print("{0} = {1}".format(string, tmp))
-
+        x -= int(i.strip())
+    print("{0} = {1}".format(string, x))
 
 def chen(string):  # 乘法
     numbers = []
     numbers += string.split("*")
-    tmp = int(numbers[0].strip())
+    x = int(numbers[0].strip())
     numbers.pop(0)
     for i in numbers:
-        tmp *= int(i.strip())
-    print("{0} = {1}".format(string, tmp))
-
+        x *= int(i.strip())
+    print("{0} = {1}".format(string, x))
 
 def chu(string):#除法
     numbers = []
     numbers += string.split("/")
-    tmp = int(numbers[0].strip())
+    x = int(numbers[0].strip())
     numbers.pop(0)
     for i in numbers:
-        tmp /= int(i.strip())
-    print("{0} = {1}".format(string, tmp))
+        x /= int(i.strip())
+    print("{0} = {1}".format(string, x))
+
 print("国庆考核作业1：")
 i=1
 while i==1:
     print("          计算器")
     print("******************************")
     chose = input("选择你要的计算方式，1:加法 ，2:减法，3:乘法，4:除法, 5:退出：")
-    if chose == "1":
-        tmp = input("请输入你要计算的数字:")
-        add(tmp)
+    if chose == '1':
+        x = input("请输入你要计算的数字:")
+        add(x)
     elif chose == '2':
-        tmp = input("请输入你要计算的数字:")
-        jian(tmp)
+        x = input("请输入你要计算的数字:")
+        jian(x)
     elif chose == '3':
-        tmp = input("请输入你要计算的数字:")
-        chen(tmp)
+        x = input("请输入你要计算的数字:")
+        chen(x)
     elif chose == '4':
-        tmp = input("请输入你要计算的数字:")
-        chu(tmp)
+        x = input("请输入你要计算的数字:")
+        chu(x)
     elif chose == '5':
         break
